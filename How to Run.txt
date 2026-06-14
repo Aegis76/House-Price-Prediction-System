@@ -1,0 +1,11 @@
+# Basic run (Ridge with tuning)
+python house_price_pipeline.py
+
+# Linear regression, no feature selection, custom test size
+python house_price_pipeline.py --model-type linear --max-features 20 --test-size 0.15
+
+# Ridge with fixed alpha (disable tuning)
+python house_price_pipeline.py --model-type ridge --alpha 2.0 --no-tune-alpha
+
+# Load a saved model and run prediction demo
+python house_price_pipeline.py --load-model house_price_model_20250614_120000.pkl --predict-demo
